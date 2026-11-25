@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="600" role="img" aria-label="Cycle de Brayton ouvert dans le diagramme de Clapeyron P-v, sans retour 4 vers 1">
+  <title>Cycle de Brayton ouvert — diagramme de Clapeyron (P, v)</title>
+  <rect x="0" y="0" width="640" height="380" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
+    </marker>
+  </defs>
+  <line x1="50" y1="335" x2="620" y2="335" stroke="#1c2733" stroke-width="1.5"/>
+  <line x1="50" y1="335" x2="50" y2="25" stroke="#1c2733" stroke-width="1.5"/>
+  <text x="606" y="356" font-size="15" font-style="italic">v</text>
+  <text x="30" y="40" font-size="15" font-style="italic">P</text>
+  <line x1="50" y1="300" x2="480" y2="300" stroke="#9db4cc" stroke-dasharray="5 4"/>
+  <line x1="50" y1="60" x2="130" y2="60" stroke="#9db4cc" stroke-dasharray="5 4"/>
+  <text x="54" y="316" font-size="12" fill="#45566b">P₁ = P₄ = 1 bar</text>
+  <text x="200" y="52" font-size="12" fill="#45566b">P₂ = P₃ = 8 bar</text>
+  <path d="M 177 300 C 150 220, 95 130, 61 60" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="61" y1="60" x2="130" y2="60" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 130 60 C 230 150, 390 240, 480 300" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="492" y1="300" x2="615" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="556" y="284" font-size="11" fill="#45566b" text-anchor="middle">rejet à l'atmosphère</text>
+  <line x1="60" y1="300" x2="168" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="100" y="284" font-size="11" fill="#45566b" text-anchor="middle">air frais</text>
+  <circle cx="177" cy="300" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="61" cy="60" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="130" cy="60" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="480" cy="300" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+  <text x="184" y="318" font-size="14" font-weight="bold">1</text>
+  <text x="36" y="58" font-size="14" font-weight="bold">2</text>
+  <text x="138" y="48" font-size="14" font-weight="bold">3</text>
+  <text x="486" y="318" font-size="14" font-weight="bold">4</text>
+  <text x="88" y="205" font-size="12" fill="#45566b" transform="rotate(-62 88 205)">compresseur (adiab. rév.)</text>
+  <text x="140" y="82" font-size="12" fill="#45566b">combustion (isobare)</text>
+  <text x="295" y="180" font-size="12" fill="#45566b" transform="rotate(29 295 180)">turbine (adiab. rév.)</text>
+</svg>
