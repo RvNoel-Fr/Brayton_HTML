@@ -45,10 +45,10 @@
       <li>il est comprimé dans un <strong>compresseur</strong> (état 1 → état 2) ;</li>
       <li>il est chauffé à <strong>pression constante</strong> dans la <strong>chambre de combustion</strong> (2 → 3) ;</li>
       <li>il se détend dans la <strong>turbine</strong>, qui fournit le travail utile de la machine (3 → 4) ;</li>
-      <li>les gaz brûlés sont rejetés dans l'atmosphère à <strong>pression constante</strong> (4 → 1).</li>
+      <li>les gaz brûlés sont rejetés dans l'atmosphère à <strong>pression constante</strong> (état 4) ; de l'air frais entre à l'état 1 — le circuit est ouvert : pas de transformation 4 → 1 du même fluide.</li>
     </ul>
     <div class="svg-wrap">
-      <svg viewBox="0 0 940 260" width="880" role="img" aria-label="Schéma de principe : compresseur, chambre de combustion, turbine à gaz, points 1 à 4">
+      <svg viewBox="0 0 940 310" width="880" role="img" aria-label="Schéma de principe : compresseur et turbine sur un axe de rotation commun, chambre de combustion en partie haute, points 1 à 4">
         <defs>
           <marker id="arrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
@@ -56,55 +56,62 @@
           <marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#b0762a"/>
           </marker>
+          <marker id="arrS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#1c2733"/>
+          </marker>
         </defs>
-        <line x1="20" y1="170" x2="135" y2="170" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrP)"/>
-        <text x="24" y="152" font-size="12" fill="#45566b">air frais — D = 50 kg·s⁻¹</text>
-        <circle cx="100" cy="170" r="7" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
-        <text x="100" y="194" font-size="14" font-weight="bold" text-anchor="middle">1</text>
-        <text x="100" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₁, T₁</text>
-        <polygon points="140,120 265,120 245,220 160,220" fill="#eaf1f8" stroke="#0b5394" stroke-width="2"/>
-        <text x="202" y="176" font-size="13" font-weight="bold" text-anchor="middle" fill="#0b5394">Compresseur</text>
-        <text x="202" y="246" font-size="11" fill="#45566b" text-anchor="middle">1 → 2 : adiabatique réversible</text>
-        <line x1="202" y1="72" x2="202" y2="116" stroke="#0b5394" stroke-width="2" marker-end="url(#arrP)"/>
-        <text x="212" y="78" font-size="11" fill="#45566b">travail reçu (w₁₂)</text>
-        <line x1="265" y1="170" x2="345" y2="170" stroke="#0b5394" stroke-width="2.5"/>
-        <circle cx="305" cy="170" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
-        <text x="305" y="194" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">2</text>
-        <text x="305" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₂, T₂</text>
-        <rect x="345" y="120" width="195" height="100" rx="6" fill="#fff8e6" stroke="#0b5394" stroke-width="2"/>
-        <text x="442" y="166" font-size="13" font-weight="bold" text-anchor="middle" fill="#8a6d1a">Chambre de combustion</text>
-        <text x="442" y="188" font-size="11" text-anchor="middle" fill="#45566b">chauffage isobare</text>
-        <text x="442" y="246" font-size="11" fill="#45566b" text-anchor="middle">2 → 3 : isobare, q₂₃ = q_c</text>
-        <line x1="442" y1="58" x2="442" y2="116" stroke="#b0762a" stroke-width="2" marker-end="url(#arrC)"/>
-        <text x="452" y="64" font-size="11" fill="#8a6d1a">combustible — q_c = 1100 kJ·kg⁻¹</text>
-        <line x1="540" y1="170" x2="615" y2="170" stroke="#0b5394" stroke-width="2.5"/>
-        <circle cx="577" cy="170" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
-        <text x="577" y="194" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">3</text>
-        <text x="577" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₃, T₃</text>
-        <polygon points="615,125 695,125 735,215 635,215" fill="#eaf1f8" stroke="#0b5394" stroke-width="2"/>
-        <text x="675" y="176" font-size="13" font-weight="bold" text-anchor="middle" fill="#0b5394">Turbine à gaz</text>
-        <text x="675" y="246" font-size="11" fill="#45566b" text-anchor="middle">3 → 4 : adiabatique réversible</text>
-        <line x1="675" y1="118" x2="675" y2="62" stroke="#0b5394" stroke-width="2" marker-end="url(#arrP)"/>
-        <text x="685" y="68" font-size="11" fill="#45566b">travail utile fourni (w₃₄)</text>
-        <line x1="735" y1="170" x2="925" y2="170" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrP)"/>
-        <circle cx="790" cy="170" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
-        <text x="790" y="194" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">4</text>
-        <text x="790" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₄, T₄</text>
-        <text x="878" y="150" font-size="11" fill="#45566b" text-anchor="middle">gaz brûlés rejetés (P₄ = P₁)</text>
+        <line x1="20" y1="250" x2="135" y2="250" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrP)"/>
+        <text x="24" y="232" font-size="12" fill="#45566b">air frais — D = 50 kg·s⁻¹</text>
+        <circle cx="100" cy="250" r="7" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <text x="100" y="276" font-size="14" font-weight="bold" text-anchor="middle">1</text>
+        <text x="100" y="292" font-size="10" fill="#45566b" text-anchor="middle">P₁, T₁</text>
+        <polygon points="140,200 265,200 245,300 160,300" fill="#eaf1f8" stroke="#0b5394" stroke-width="2"/>
+        <text x="202" y="244" font-size="13" font-weight="bold" text-anchor="middle" fill="#0b5394">Compresseur</text>
+        <text x="202" y="264" font-size="10" fill="#45566b" text-anchor="middle">1 → 2 : adiab. rév.</text>
+        <text x="148" y="182" font-size="11" fill="#45566b" text-anchor="end">travail reçu (w₁₂)</text>
+        <line x1="202" y1="200" x2="202" y2="145" stroke="#1c2733" stroke-width="3"/>
+        <line x1="655" y1="200" x2="655" y2="145" stroke="#1c2733" stroke-width="3"/>
+        <line x1="202" y1="145" x2="655" y2="145" stroke="#1c2733" stroke-width="3"/>
+        <line x1="655" y1="145" x2="770" y2="145" stroke="#1c2733" stroke-width="3" marker-end="url(#arrS)"/>
+        <text x="436" y="135" font-size="12" font-weight="bold" text-anchor="middle" fill="#1c2733">axe de rotation commun</text>
+        <text x="778" y="168" font-size="11" fill="#45566b">travail utile fourni (w₃₄)</text>
+        <path d="M 255 250 L 300 250 L 300 155" fill="none" stroke="#0b5394" stroke-width="2.5"/>
+        <path d="M 300 135 L 300 70 L 340 70" fill="none" stroke="#0b5394" stroke-width="2.5"/>
+        <circle cx="300" cy="200" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
+        <text x="316" y="204" font-size="14" font-weight="bold" fill="#0b5394">2</text>
+        <text x="316" y="220" font-size="10" fill="#45566b">P₂, T₂</text>
+        <rect x="340" y="30" width="200" height="80" rx="6" fill="#fff8e6" stroke="#0b5394" stroke-width="2"/>
+        <text x="440" y="60" font-size="13" font-weight="bold" text-anchor="middle" fill="#8a6d1a">Chambre de combustion</text>
+        <text x="440" y="84" font-size="11" text-anchor="middle" fill="#45566b">2 → 3 : isobare, q₂₃ = q_c</text>
+        <line x1="440" y1="6" x2="440" y2="26" stroke="#b0762a" stroke-width="2" marker-end="url(#arrC)"/>
+        <text x="452" y="12" font-size="11" fill="#8a6d1a">combustible — q_c = 1100 kJ·kg⁻¹</text>
+        <path d="M 540 70 L 580 70 L 580 135" fill="none" stroke="#0b5394" stroke-width="2.5"/>
+        <path d="M 580 155 L 580 250 L 625 250" fill="none" stroke="#0b5394" stroke-width="2.5"/>
+        <circle cx="580" cy="200" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
+        <text x="596" y="204" font-size="14" font-weight="bold" fill="#0b5394">3</text>
+        <text x="596" y="220" font-size="10" fill="#45566b">P₃, T₃</text>
+        <polygon points="615,200 695,200 735,300 635,300" fill="#eaf1f8" stroke="#0b5394" stroke-width="2"/>
+        <text x="670" y="244" font-size="13" font-weight="bold" text-anchor="middle" fill="#0b5394">Turbine à gaz</text>
+        <text x="670" y="264" font-size="10" fill="#45566b" text-anchor="middle">3 → 4 : adiab. rév.</text>
+        <line x1="715" y1="250" x2="925" y2="250" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrP)"/>
+        <circle cx="800" cy="250" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
+        <text x="800" y="276" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">4</text>
+        <text x="800" y="292" font-size="10" fill="#45566b" text-anchor="middle">P₄, T₄</text>
+        <text x="870" y="232" font-size="11" fill="#45566b" text-anchor="middle">gaz brûlés rejetés</text>
       </svg>
     </div>
-    <p class="svg-cap">Schéma de principe de l'installation : les points 1 à 4 sont placés entre chaque élément.</p>
+    <p class="svg-cap">Schéma de principe de l'installation (circuit ouvert) : compresseur et turbine sur un axe de rotation commun, chambre de combustion en partie haute ; les points 1 à 4 sont placés entre chaque élément.</p>
     <p>Tous les calculs sont effectués <strong>par unité de masse</strong> (pour 1 kg d'air traversant l'installation).</p>
     <div class="svg-wrap">
-      <svg viewBox="0 0 560 380" width="540" role="img" aria-label="Cycle de Brayton dans le diagramme P-v">
+      <svg viewBox="0 0 640 380" width="600" role="img" aria-label="Cycle de Brayton ouvert dans le diagramme de Clapeyron P-v, sans retour 4 vers 1">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
           </marker>
         </defs>
-        <line x1="50" y1="335" x2="535" y2="335" stroke="#1c2733" stroke-width="1.5"/>
+        <line x1="50" y1="335" x2="620" y2="335" stroke="#1c2733" stroke-width="1.5"/>
         <line x1="50" y1="335" x2="50" y2="25" stroke="#1c2733" stroke-width="1.5"/>
-        <text x="522" y="356" font-size="15" font-style="italic">v</text>
+        <text x="606" y="356" font-size="15" font-style="italic">v</text>
         <text x="30" y="40" font-size="15" font-style="italic">P</text>
         <line x1="50" y1="300" x2="480" y2="300" stroke="#9db4cc" stroke-dasharray="5 4"/>
         <line x1="50" y1="60" x2="130" y2="60" stroke="#9db4cc" stroke-dasharray="5 4"/>
@@ -113,7 +120,10 @@
         <path d="M 177 300 C 150 220, 95 130, 61 60" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
         <line x1="61" y1="60" x2="130" y2="60" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
         <path d="M 130 60 C 230 150, 390 240, 480 300" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
-        <line x1="480" y1="300" x2="177" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <line x1="492" y1="300" x2="615" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <text x="556" y="284" font-size="11" fill="#45566b" text-anchor="middle">rejet à l'atmosphère</text>
+        <line x1="60" y1="300" x2="168" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <text x="100" y="284" font-size="11" fill="#45566b" text-anchor="middle">air frais</text>
         <circle cx="177" cy="300" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
         <circle cx="61" cy="60" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
         <circle cx="130" cy="60" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
@@ -125,10 +135,9 @@
         <text x="88" y="205" font-size="12" fill="#45566b" transform="rotate(-62 88 205)">compresseur (adiab. rév.)</text>
         <text x="140" y="82" font-size="12" fill="#45566b">combustion (isobare)</text>
         <text x="295" y="180" font-size="12" fill="#45566b" transform="rotate(29 295 180)">turbine (adiab. rév.)</text>
-        <text x="235" y="322" font-size="12" fill="#45566b">échappement (isobare)</text>
       </svg>
     </div>
-    <p class="svg-cap">Cycle correspondant dans le diagramme (P, v).</p>
+    <p class="svg-cap">Diagramme de Clapeyron (P, v) du cycle ouvert : aucune évolution 4 → 1 n'est tracée — les gaz sont rejetés en 4, l'air frais entre en 1.</p>
   </section>
 
   <section>
@@ -140,7 +149,7 @@
         <li>1 → 2 : compression <strong>adiabatique réversible</strong> jusqu'à P₂ = 8,0 bar.</li>
         <li>2 → 3 : combustion <strong>isobare</strong> ; l'énergie massique de combustion vaut q<sub>c</sub> = 1100 kJ·kg⁻¹ et est intégralement transmise à l'air : q₂₃ = q<sub>c</sub>.</li>
         <li>3 → 4 : détente <strong>adiabatique réversible</strong> dans la turbine jusqu'à P₄ = P₁ = 1,0 bar.</li>
-        <li>4 → 1 : refroidissement <strong>isobare</strong> des gaz à l'échappement jusqu'à T₁.</li>
+        <li>4 → 1 : les gaz sont rejetés à l'échappement à P₄ = P₁ ; pour le bilan, on les ramène fictivement de T₄ à T₁ à pression constante (fermeture du cycle ouvert).</li>
         <li>Débit massique d'air : D = 50 kg·s⁻¹.</li>
         <li>On prend l'enthalpie massique h = c<sub>p</sub>·T (référence arbitraire) et on donne 8<sup>2/7</sup> ≈ 1,8114.</li>
       </ul>
