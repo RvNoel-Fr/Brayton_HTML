@@ -16,8 +16,9 @@
   <text x="54" y="316" font-size="12" fill="#45566b">P₁ = P₄ = 1 bar</text>
   <text x="200" y="52" font-size="12" fill="#45566b">P₂ = P₃ = 8 bar</text>
   <path d="M 177 300 C 150 220, 95 130, 61 60" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path id="leg12" d="M 61 60 C 95 130, 150 220, 177 300" fill="none" stroke="none"/>
   <line x1="61" y1="60" x2="130" y2="60" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
-  <path d="M 130 60 C 230 150, 390 240, 480 300" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path id="c34" d="M 130 60 C 230 150, 390 240, 480 300" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
   <line x1="492" y1="300" x2="615" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
   <text x="556" y="284" font-size="11" fill="#45566b" text-anchor="middle">rejet à l'atmosphère</text>
   <line x1="60" y1="300" x2="168" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
@@ -30,7 +31,7 @@
   <text x="36" y="58" font-size="14" font-weight="bold">2</text>
   <text x="138" y="48" font-size="14" font-weight="bold">3</text>
   <text x="486" y="318" font-size="14" font-weight="bold">4</text>
-  <text x="88" y="205" font-size="12" fill="#45566b" transform="rotate(-62 88 205)">compresseur (adiab. rév.)</text>
+  <text font-size="12" fill="#45566b" dy="-8"><textPath href="#leg12" startOffset="10%">compresseur (adiab. rév.)</textPath></text>
   <text x="140" y="82" font-size="12" fill="#45566b">combustion (isobare)</text>
-  <text x="295" y="180" font-size="12" fill="#45566b" transform="rotate(29 295 180)">turbine (adiab. rév.)</text>
+  <text font-size="12" fill="#45566b" dy="16"><textPath href="#c34" startOffset="12%">turbine (adiab. rév.)</textPath></text>
 </svg>
