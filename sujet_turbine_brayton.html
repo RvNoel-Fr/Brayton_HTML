@@ -47,6 +47,53 @@
       <li>il se détend dans la <strong>turbine</strong>, qui fournit le travail utile de la machine (3 → 4) ;</li>
       <li>les gaz brûlés sont rejetés dans l'atmosphère à <strong>pression constante</strong> (4 → 1).</li>
     </ul>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 940 260" width="880" role="img" aria-label="Schéma de principe : compresseur, chambre de combustion, turbine à gaz, points 1 à 4">
+        <defs>
+          <marker id="arrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
+          </marker>
+          <marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#b0762a"/>
+          </marker>
+        </defs>
+        <line x1="20" y1="170" x2="135" y2="170" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrP)"/>
+        <text x="24" y="152" font-size="12" fill="#45566b">air frais — D = 50 kg·s⁻¹</text>
+        <circle cx="100" cy="170" r="7" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <text x="100" y="194" font-size="14" font-weight="bold" text-anchor="middle">1</text>
+        <text x="100" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₁, T₁</text>
+        <polygon points="140,120 265,120 245,220 160,220" fill="#eaf1f8" stroke="#0b5394" stroke-width="2"/>
+        <text x="202" y="176" font-size="13" font-weight="bold" text-anchor="middle" fill="#0b5394">Compresseur</text>
+        <text x="202" y="246" font-size="11" fill="#45566b" text-anchor="middle">1 → 2 : adiabatique réversible</text>
+        <line x1="202" y1="72" x2="202" y2="116" stroke="#0b5394" stroke-width="2" marker-end="url(#arrP)"/>
+        <text x="212" y="78" font-size="11" fill="#45566b">travail reçu (w₁₂)</text>
+        <line x1="265" y1="170" x2="345" y2="170" stroke="#0b5394" stroke-width="2.5"/>
+        <circle cx="305" cy="170" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
+        <text x="305" y="194" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">2</text>
+        <text x="305" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₂, T₂</text>
+        <rect x="345" y="120" width="195" height="100" rx="6" fill="#fff8e6" stroke="#0b5394" stroke-width="2"/>
+        <text x="442" y="166" font-size="13" font-weight="bold" text-anchor="middle" fill="#8a6d1a">Chambre de combustion</text>
+        <text x="442" y="188" font-size="11" text-anchor="middle" fill="#45566b">chauffage isobare</text>
+        <text x="442" y="246" font-size="11" fill="#45566b" text-anchor="middle">2 → 3 : isobare, q₂₃ = q_c</text>
+        <line x1="442" y1="58" x2="442" y2="116" stroke="#b0762a" stroke-width="2" marker-end="url(#arrC)"/>
+        <text x="452" y="64" font-size="11" fill="#8a6d1a">combustible — q_c = 1100 kJ·kg⁻¹</text>
+        <line x1="540" y1="170" x2="615" y2="170" stroke="#0b5394" stroke-width="2.5"/>
+        <circle cx="577" cy="170" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
+        <text x="577" y="194" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">3</text>
+        <text x="577" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₃, T₃</text>
+        <polygon points="615,125 695,125 735,215 635,215" fill="#eaf1f8" stroke="#0b5394" stroke-width="2"/>
+        <text x="675" y="176" font-size="13" font-weight="bold" text-anchor="middle" fill="#0b5394">Turbine à gaz</text>
+        <text x="675" y="246" font-size="11" fill="#45566b" text-anchor="middle">3 → 4 : adiabatique réversible</text>
+        <line x1="675" y1="118" x2="675" y2="62" stroke="#0b5394" stroke-width="2" marker-end="url(#arrP)"/>
+        <text x="685" y="68" font-size="11" fill="#45566b">travail utile fourni (w₃₄)</text>
+        <line x1="735" y1="170" x2="925" y2="170" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrP)"/>
+        <circle cx="790" cy="170" r="7" fill="#fff" stroke="#0b5394" stroke-width="2"/>
+        <text x="790" y="194" font-size="14" font-weight="bold" text-anchor="middle" fill="#0b5394">4</text>
+        <text x="790" y="210" font-size="10" fill="#45566b" text-anchor="middle">P₄, T₄</text>
+        <text x="878" y="150" font-size="11" fill="#45566b" text-anchor="middle">gaz brûlés rejetés (P₄ = P₁)</text>
+      </svg>
+    </div>
+    <p class="svg-cap">Schéma de principe de l'installation : les points 1 à 4 sont placés entre chaque élément.</p>
     <p>Tous les calculs sont effectués <strong>par unité de masse</strong> (pour 1 kg d'air traversant l'installation).</p>
     <div class="svg-wrap">
       <svg viewBox="0 0 560 380" width="540" role="img" aria-label="Cycle de Brayton dans le diagramme P-v">
@@ -81,7 +128,7 @@
         <text x="235" y="322" font-size="12" fill="#45566b">échappement (isobare)</text>
       </svg>
     </div>
-    <p class="svg-cap">Schéma du cycle dans le diagramme (P, v).</p>
+    <p class="svg-cap">Cycle correspondant dans le diagramme (P, v).</p>
   </section>
 
   <section>
@@ -101,15 +148,7 @@
   </section>
 
   <section>
-    <h2>3. Rappels de cours</h2>
-    <div class="formule">Premier principe en système ouvert, en régime permanent, par unité de masse : &nbsp;<strong>Δh = q + w</strong></div>
-    <p class="aide">Convention de signes : q &gt; 0 si le fluide <em>reçoit</em> de la chaleur ; w &gt; 0 si le fluide <em>reçoit</em> un travail utile (cas du compresseur), w &lt; 0 s'il en <em>fournit</em> (cas de la turbine).</p>
-    <div class="formule">Gaz parfait, transformation adiabatique réversible : T<sup>γ</sup>·P<sup>1−γ</sup> = cte, soit &nbsp;<strong>T₂/T₁ = (P₂/P₁)<sup>(γ−1)/γ</sup></strong></div>
-    <div class="formule">Loi des gaz parfaits : &nbsp;<strong>P·v = R·T</strong></div>
-  </section>
-
-  <section>
-    <h2>4. Questions</h2>
+    <h2>3. Questions</h2>
     <div class="question"><span class="num">Q1.</span> Calculer les températures T₂, T₃ et T₄ des états 2, 3 et 4. Pour T₃, appliquer le premier principe à la chambre de combustion en utilisant l'énergie massique de combustion q<sub>c</sub>.</div>
     <div class="question"><span class="num">Q2.</span> Calculer les volumes massiques v₁, v₂, v₃, v₄ et les enthalpies massiques h₁, h₂, h₃, h₄. Présenter les résultats dans un <strong>tableau d'états</strong>.</div>
     <div class="question"><span class="num">Q3.</span> Pour chacune des quatre transformations, calculer la chaleur massique q, le travail utile massique w et la variation d'enthalpie massique Δh échangés. Présenter les résultats dans un <strong>tableau récapitulatif</strong> (convention : q &gt; 0 et w &gt; 0 lorsqu'ils sont reçus par le fluide).</div>
