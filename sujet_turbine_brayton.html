@@ -48,49 +48,9 @@
       <li>les gaz brûlés sont rejetés dans l'atmosphère à <strong>pression constante</strong> (état 4) ; de l'air frais entre à l'état 1 — le circuit est ouvert : pas de transformation 4 → 1 du même fluide.</li>
     </ul>
     <div class="svg-wrap">
-      <svg viewBox="0 0 1000 310" width="920" role="img" aria-label="Schéma de principe de la turbine à gaz : arbre commun compresseur-turbine, chambre de combustion au-dessus de la ligne de flux, points 1 à 4">
-        <defs>
-          <marker id="arrF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
-          </marker>
-          <marker id="arrCb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/>
-          </marker>
-        </defs>
-        <polygon points="150,200 260,200 240,300 170,300" fill="#eceff1" stroke="#607d8b" stroke-width="2"/>
-        <polygon points="700,200 800,200 830,300 720,300" fill="#eceff1" stroke="#607d8b" stroke-width="2"/>
-        <text x="205" y="256" font-size="12" text-anchor="middle" fill="#37474f">compression</text>
-        <text x="765" y="256" font-size="12" text-anchor="middle" fill="#37474f">détente</text>
-        <rect x="400" y="60" width="200" height="90" rx="4" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
-        <text x="500" y="95" font-size="13" font-weight="bold" text-anchor="middle" fill="#b45309">Combustion</text>
-        <path d="M 500 108 C 491 120, 494 132, 500 140 C 506 132, 509 120, 500 108 Z" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
-        <line x1="500" y1="20" x2="500" y2="56" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrCb)"/>
-        <line x1="30" y1="250" x2="70" y2="250" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrF)"/>
-        <line x1="70" y1="250" x2="320" y2="250" stroke="#0b5394" stroke-width="2.5"/>
-        <path d="M 320 250 L 320 105 L 400 105" fill="none" stroke="#0b5394" stroke-width="2.5"/>
-        <path d="M 600 105 L 650 105 L 650 250" fill="none" stroke="#0b5394" stroke-width="2.5"/>
-        <line x1="650" y1="250" x2="920" y2="250" stroke="#0b5394" stroke-width="2.5"/>
-        <line x1="920" y1="250" x2="970" y2="250" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrF)"/>
-        <line x1="160" y1="250" x2="310" y2="250" stroke="#37474f" stroke-width="5"/>
-        <line x1="330" y1="250" x2="640" y2="250" stroke="#37474f" stroke-width="5"/>
-        <line x1="660" y1="250" x2="815" y2="250" stroke="#37474f" stroke-width="5"/>
-        <text x="500" y="232" font-size="13" font-weight="bold" text-anchor="middle" fill="#607d8b">HP</text>
-        <text x="930" y="285" font-size="13" font-weight="bold" text-anchor="middle" fill="#607d8b">BP</text>
-        <circle cx="90" cy="250" r="8" fill="#1c2733"/>
-        <text x="90" y="255" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
-        <text x="90" y="282" font-size="11" text-anchor="middle" fill="#45566b">p₁, T₁</text>
-        <circle cx="285" cy="250" r="8" fill="#1c2733"/>
-        <text x="285" y="255" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
-        <text x="285" y="282" font-size="11" text-anchor="middle" fill="#45566b">p₂, T₂</text>
-        <circle cx="650" cy="180" r="8" fill="#1c2733"/>
-        <text x="650" y="185" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
-        <text x="666" y="185" font-size="11" fill="#45566b">p₃, T₃</text>
-        <circle cx="880" cy="250" r="8" fill="#1c2733"/>
-        <text x="880" y="255" font-size="12" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
-        <text x="880" y="282" font-size="11" text-anchor="middle" fill="#45566b">p₄, T₄</text>
-      </svg>
+      <img src="schem-tag.png" style="max-width:100%; height:auto;" alt="Schéma de principe de la turbine à gaz : air frais au point 1 (p₁, T₁), compresseur (compression), point 2 (p₂, T₂), chambre de combustion au centre (Combustion, combustible arrivant par le haut), point 3 (p₃, T₃), turbine (détente), point 4 (p₄, T₄), gaz brûlés rejetés à droite ; arbre commun reliant le compresseur et la turbine en passant sous la chambre de combustion ; HP au-dessus et BP au-dessous de la ligne de flux.">
     </div>
-    <p class="svg-cap">Schéma de principe de la turbine à gaz (circuit ouvert) : arbre commun traversant compresseur et turbine, chambre de combustion au-dessus de la ligne de flux ; points 1 à 4 (HP entre 2 et 3, BP à l'échappement).</p>
+    <p class="svg-cap">Schéma de principe de l'installation (image fournie) : les points 1 à 4 sont repérés entre chaque élément.</p>
     <p>Tous les calculs sont effectués <strong>par unité de masse</strong> (pour 1 kg d'air traversant l'installation).</p>
     <div class="svg-wrap">
       <svg viewBox="0 0 640 380" width="600" role="img" aria-label="Cycle de Brayton ouvert dans le diagramme de Clapeyron P-v, sans retour 4 vers 1">
