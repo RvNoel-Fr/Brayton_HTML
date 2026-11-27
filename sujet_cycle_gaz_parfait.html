@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercice 1 — Cycle d'un gaz parfait en système fermé</title>
+<style>
+  :root { --accent:#0b5394; --bg:#f7f9fc; --card:#ffffff; --border:#d7e0ea; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; margin:0; background:var(--bg); color:#1c2733; line-height:1.55; }
+  header { background:var(--accent); color:#fff; padding:1.2rem 2rem; }
+  header h1 { margin:0; font-size:1.35rem; }
+  header p { margin:.3rem 0 0; opacity:.92; font-size:.95rem; }
+  main { max-width: 920px; margin: 1.5rem auto; padding: 0 1rem 3rem; }
+  section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.1rem 1.5rem; margin-bottom:1.2rem; }
+  h2 { color:var(--accent); font-size:1.12rem; margin:0 0 .6rem; border-bottom:2px solid var(--border); padding-bottom:.4rem; }
+  h3 { color:var(--accent); font-size:1rem; margin:1rem 0 .3rem; }
+  table { border-collapse: collapse; width:100%; margin:.7rem 0; }
+  th, td { border:1px solid var(--border); padding:.45rem .55rem; text-align:center; }
+  th { background:#eaf1f8; }
+  td.left, th.left { text-align:left; }
+  tr.total td { background:#eef7f0; font-weight:700; }
+  .formule { background:#f2f6fb; border:1px solid var(--border); border-radius:8px; padding:.55rem .9rem; margin:.55rem 0; font-size:1.03rem; }
+  .donnees { background:#fff8e6; border:1px solid #ecd9a0; border-radius:10px; padding:.4rem 1.3rem; }
+  .donnees li { margin:.3rem 0; }
+  .question { margin:.85rem 0; padding:.35rem 0 .35rem .8rem; border-left:4px solid var(--accent); }
+  .num { font-weight:700; color:var(--accent); }
+  .aide { font-size:.92rem; color:#45566b; }
+  footer { text-align:center; color:#7a8aa0; font-size:.88rem; padding:1rem; }
+  footer a { color:var(--accent); }
+  sup, sub { font-size:.72em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Thermodynamique — Système fermé</h1>
+  <p>Exercice 1 : cycle d'un gaz parfait en système fermé</p>
+</header>
+<main>
+
+  <section>
+    <h2>1. Énoncé</h2>
+    <p>Une certaine quantité de <strong>gaz parfait monoatomique</strong> est initialement à la température T₁ = 400 K, à la pression p₁ = 5 bar, et occupe un volume V₁ = 0,6 m³.</p>
+    <p>Le gaz se <strong>détend isothermiquement</strong> jusqu'à occuper un volume V₂ = 3 m³ (état 2). La pression diminue ensuite <strong>à volume constant</strong> jusqu'à un état 3. Le gaz retourne finalement à l'état initial en suivant une <strong>compression adiabatique réversible</strong> qui ferme le cycle. Toutes les transformations sont réversibles.</p>
+  </section>
+
+  <section>
+    <h2>2. Données</h2>
+    <div class="donnees">
+      <ul>
+        <li>R = 8,31 J·mol⁻¹·K⁻¹</li>
+        <li>c<sub>V</sub><sup>m</sup> = (3/2)·R (gaz parfait monoatomique)</li>
+        <li>1 bar = 10⁵ Pa</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Questions</h2>
+    <div class="question"><span class="num">Q1.</span> Dessinez le cycle dans un diagramme p–V (axes gradués, points 1, 2 et 3 repérés, sens de parcours indiqué).</div>
+    <div class="question"><span class="num">Q2.</span> Calculez la pression p₃ de l'état 3 en utilisant l'équation d'une transformation adiabatique réversible entre les états 3 et 1. Quelle est la température T₃ en ce point ?</div>
+    <div class="question"><span class="num">Q3.</span> Calculez le travail W réalisé, la variation d'énergie interne ΔU et la chaleur Q échangée par le gaz pour chacune des étapes, puis pour le cycle complet. Exprimez les résultats en unités du Système International. <span class="aide">(Convention : W &gt; 0 et Q &gt; 0 lorsqu'ils sont reçus par le gaz.)</span></div>
+  </section>
+
+</main>
+<footer>
+  Exercice 1 — cycle d'un gaz parfait en système fermé ·
+  <a href="corrige_cycle_gaz_parfait.html">Voir le corrigé →</a>
+</footer>
+</body>
+</html>

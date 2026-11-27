@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrigé — Exercice 1 : cycle d'un gaz parfait en système fermé</title>
+<style>
+  :root { --accent:#0b5394; --ok:#1e7d46; --bg:#f7f9fc; --card:#ffffff; --border:#d7e0ea; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; margin:0; background:var(--bg); color:#1c2733; line-height:1.55; }
+  header { background:var(--ok); color:#fff; padding:1.2rem 2rem; }
+  header h1 { margin:0; font-size:1.35rem; }
+  header p { margin:.3rem 0 0; opacity:.92; font-size:.95rem; }
+  main { max-width: 920px; margin: 1.5rem auto; padding: 0 1rem 3rem; }
+  section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.1rem 1.5rem; margin-bottom:1.2rem; }
+  h2 { color:var(--accent); font-size:1.12rem; margin:0 0 .6rem; border-bottom:2px solid var(--border); padding-bottom:.4rem; }
+  h3 { color:var(--accent); font-size:1rem; margin:1rem 0 .3rem; }
+  table { border-collapse: collapse; width:100%; margin:.7rem 0; }
+  th, td { border:1px solid var(--border); padding:.45rem .55rem; text-align:center; }
+  th { background:#eaf1f8; }
+  td.left, th.left { text-align:left; }
+  tr.total td { background:#eef7f0; font-weight:700; }
+  .formule { background:#f2f6fb; border:1px solid var(--border); border-radius:8px; padding:.55rem .9rem; margin:.55rem 0; font-size:1.03rem; }
+  .an { color:#45566b; }
+  .an strong { color:#1c2733; }
+  .aide { font-size:.92rem; color:#45566b; }
+  .svg-wrap { text-align:center; margin:.6rem 0 .2rem; }
+  .svg-cap { text-align:center; font-size:.88rem; color:#45566b; margin-top:.2rem; }
+  footer { text-align:center; color:#7a8aa0; font-size:.88rem; padding:1rem; }
+  footer a { color:var(--accent); }
+  sup, sub { font-size:.72em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Corrigé — Exercice 1</h1>
+  <p>Cycle d'un gaz parfait monoatomique en système fermé</p>
+</header>
+<main>
+
+  <section>
+    <h2>États du cycle</h2>
+    <p class="an">Nombre de moles : n = p₁V₁/(R·T₁) = (5×10⁵ × 0,6)/(8,31 × 400) = <strong>90,3 mol</strong> (nR = p₁V₁/T₁ = 750 J·K⁻¹).</p>
+    <p class="an">État 2 (détente isotherme) : T₂ = T₁ = 400 K et p₂ = p₁V₁/V₂ = 5 bar × 0,6/3 = <strong>1,0 bar</strong> = 1,0×10⁵ Pa.</p>
+    <p class="an">État 3 : V₃ = V₂ = 3 m³ (transformation 2→3 isochore).</p>
+    <table>
+      <tr><th>État</th><th>p (bar)</th><th>p (Pa)</th><th>V (m³)</th><th>T (K)</th></tr>
+      <tr><td><strong>1</strong></td><td>5,0</td><td>5,0×10⁵</td><td>0,6</td><td>400</td></tr>
+      <tr><td><strong>2</strong></td><td>1,0</td><td>1,0×10⁵</td><td>3,0</td><td>400</td></tr>
+      <tr><td><strong>3</strong></td><td>0,342</td><td>3,42×10⁴</td><td>3,0</td><td>136,8</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Q1 — Diagramme p–V du cycle</h2>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 560 400" width="520" role="img" aria-label="Cycle 1-2-3-1 dans le diagramme p-V : isotherme, isochore, adiabatique réversible">
+        <defs>
+          <marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
+          </marker>
+        </defs>
+        <line x1="50" y1="340" x2="530" y2="340" stroke="#1c2733" stroke-width="1.5"/>
+        <line x1="50" y1="340" x2="50" y2="30" stroke="#1c2733" stroke-width="1.5"/>
+        <text x="500" y="360" font-size="14" font-style="italic">V (m³)</text>
+        <text x="20" y="42" font-size="14" font-style="italic">p (bar)</text>
+        <line x1="50" y1="67.3" x2="90.7" y2="67.3" stroke="#9db4cc" stroke-dasharray="4 3"/>
+        <line x1="90.7" y1="340" x2="90.7" y2="67.3" stroke="#9db4cc" stroke-dasharray="4 3"/>
+        <line x1="50" y1="285.5" x2="458.7" y2="285.5" stroke="#9db4cc" stroke-dasharray="4 3"/>
+        <line x1="50" y1="321.3" x2="458.7" y2="321.3" stroke="#9db4cc" stroke-dasharray="4 3"/>
+        <line x1="458.7" y1="340" x2="458.7" y2="285.5" stroke="#9db4cc" stroke-dasharray="4 3"/>
+        <text x="34" y="71" font-size="11" fill="#45566b">5</text>
+        <text x="38" y="289" font-size="11" fill="#45566b">1</text>
+        <text x="12" y="325" font-size="11" fill="#45566b">0,342</text>
+        <text x="84" y="356" font-size="11" fill="#45566b">0,6</text>
+        <text x="452" y="356" font-size="11" fill="#45566b">3</text>
+        <path d="M 90.7 67.3 L 121.3 135.5 L 152 176.4 L 182.7 203.6 L 228.7 230.9 L 274.7 249.1 L 336 265.6 L 382 274.5 L 428 281.6 L 458.7 285.5" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrC)"/>
+        <line x1="458.7" y1="285.5" x2="458.7" y2="321.3" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrC)"/>
+        <path d="M 458.7 321.3 L 428 319.1 L 382 314.7 L 336 308.7 L 305.3 303.3 L 274.7 296.3 L 228.7 280.8 L 182.7 254.1 L 152 223.6 L 121.3 171.3 L 90.7 67.3" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arrC)"/>
+        <circle cx="90.7" cy="67.3" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="458.7" cy="285.5" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="458.7" cy="321.3" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <text x="97" y="63" font-size="14" font-weight="bold">1</text>
+        <text x="465" y="281" font-size="14" font-weight="bold">2</text>
+        <text x="465" y="330" font-size="14" font-weight="bold">3</text>
+        <text x="140" y="115" font-size="11" fill="#45566b">1 → 2 : isotherme (T₁ = 400 K)</text>
+        <text x="466" y="306" font-size="11" fill="#45566b">2 → 3 : isochore</text>
+        <text x="225" y="332" font-size="11" fill="#45566b">3 → 1 : adiabatique réversible</text>
+      </svg>
+    </div>
+    <p class="svg-cap">Cycle parcouru dans le sens horaire (moteur) : 1→2 isotherme, 2→3 isochore, 3→1 adiabatique réversible.</p>
+  </section>
+
+  <section>
+    <h2>Q2 — Pression et température de l'état 3</h2>
+    <p class="an">Gaz monoatomique : c<sub>p</sub><sup>m</sup> = c<sub>V</sub><sup>m</sup> + R = (5/2)·R, donc γ = c<sub>p</sub>/c<sub>V</sub> = <strong>5/3</strong>.</p>
+    <p>Adiabatique réversible 3→1 : p·V^γ = cte et T·V^(γ−1) = cte.</p>
+    <div class="formule">p₃ = p₁·(V₁/V₃)^γ = 5×10⁵ × (0,6/3)^(5/3) = <strong>3,42×10⁴ Pa ≈ 0,342 bar</strong></div>
+    <div class="formule">T₃ = T₁·(V₁/V₃)^(γ−1) = 400 × (0,2)^(2/3) = <strong>136,8 K ≈ 137 K</strong></div>
+    <p class="aide">Vérification par l'isochore 2→3 : p₃ = p₂·T₃/T₂ = 1 bar × 136,8/400 ≈ 0,342 bar ✓ (ou p₃V₃ = nRT₃).</p>
+  </section>
+
+  <section>
+    <h2>Q3 — Travail W, variation d'énergie interne ΔU et chaleur Q</h2>
+    <p>Premier principe en système fermé : <strong>ΔU = W + Q</strong> (W, Q &gt; 0 reçus par le gaz).</p>
+    <p class="an">n·c<sub>V</sub><sup>m</sup> = (3/2)·nR = (3/2) × (p₁V₁/T₁) = (3/2) × 750 = <strong>1125 J·K⁻¹</strong>.</p>
+    <h3>1→2 : détente isotherme (T = 400 K)</h3>
+    <div class="formule">ΔU₁₂ = n·c<sub>V</sub><sup>m</sup>·(T₂ − T₁) = <strong>0</strong></div>
+    <div class="formule">W₁₂ = −∫p dV = −nRT₁·ln(V₂/V₁) = −p₁V₁·ln(V₂/V₁) = −(5×10⁵)(0,6)·ln(3/0,6) = <strong>−4,83×10⁵ J</strong></div>
+    <div class="formule">Q₁₂ = −W₁₂ = <strong>+4,83×10⁵ J</strong> (chaleur reçue par le gaz)</div>
+    <h3>2→3 : refroidissement isochore (V = 3 m³)</h3>
+    <div class="formule">W₂₃ = <strong>0</strong> (volume constant)</div>
+    <div class="formule">ΔU₂₃ = n·c<sub>V</sub><sup>m</sup>·(T₃ − T₂) = 1125 × (136,8 − 400) = <strong>−2,96×10⁵ J</strong></div>
+    <div class="formule">Q₂₃ = ΔU₂₃ = <strong>−2,96×10⁵ J</strong> (chaleur cédée par le gaz)</div>
+    <h3>3→1 : compression adiabatique réversible</h3>
+    <div class="formule">Q₃₁ = <strong>0</strong> (adiabatique)</div>
+    <div class="formule">W₃₁ = ΔU₃₁ = n·c<sub>V</sub><sup>m</sup>·(T₁ − T₃) = 1125 × (400 − 136,8) = <strong>+2,96×10⁵ J</strong></div>
+    <p class="aide">Vérification : W₃₁ = (p₁V₁ − p₃V₃)/(γ−1) = (3,00×10⁵ − 1,026×10⁵)/(2/3) = +2,96×10⁵ J ✓</p>
+    <h3>Tableau récapitulatif (unités SI, en joules)</h3>
+    <table>
+      <tr><th class="left">Étape</th><th>W (J)</th><th>ΔU (J)</th><th>Q (J)</th><th class="left">Interprétation</th></tr>
+      <tr><td class="left">1→2 isotherme</td><td>−4,83×10⁵</td><td>0</td><td>+4,83×10⁵</td><td class="left">détente : le gaz fournit du travail</td></tr>
+      <tr><td class="left">2→3 isochore</td><td>0</td><td>−2,96×10⁵</td><td>−2,96×10⁵</td><td class="left">refroidissement à V constant</td></tr>
+      <tr><td class="left">3→1 adiabatique rév.</td><td>+2,96×10⁵</td><td>+2,96×10⁵</td><td>0</td><td class="left">compression adiabatique</td></tr>
+      <tr class="total"><td class="left">Cycle complet</td><td>−1,87×10⁵</td><td>0</td><td>+1,87×10⁵</td><td class="left">Q_cycle = −W_cycle ✓</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Vérifications</h2>
+    <ul>
+      <li>Sur un cycle, ΔU = 0 et Q_cycle = −W_cycle = +1,87×10⁵ J : le gaz fournit un travail net de <strong>1,87×10⁵ J</strong> par cycle (parcours horaire : le cycle est moteur).</li>
+      <li>Si la machine est utilisée comme moteur thermique : η = |W_cycle| / Q_reçue = 1,87×10⁵ / 4,83×10⁵ ≈ <strong>0,387, soit 38,7 %</strong>.</li>
+    </ul>
+  </section>
+
+</main>
+<footer>
+  Corrigé de l'exercice 1 — cycle d'un gaz parfait en système fermé ·
+  <a href="sujet_cycle_gaz_parfait.html">← Retour au sujet</a>
+</footer>
+</body>
+</html>
