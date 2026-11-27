@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrigé — Turbine à gaz : cycle de Brayton ouvert</title>
+<style>
+  :root { --accent:#0b5394; --ok:#1e7d46; --bg:#f7f9fc; --card:#ffffff; --border:#d7e0ea; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; margin:0; background:var(--bg); color:#1c2733; line-height:1.55; }
+  header { background:var(--ok); color:#fff; padding:1.2rem 2rem; }
+  header h1 { margin:0; font-size:1.35rem; }
+  header p { margin:.3rem 0 0; opacity:.92; font-size:.95rem; }
+  main { max-width: 920px; margin: 1.5rem auto; padding: 0 1rem 3rem; }
+  section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.1rem 1.5rem; margin-bottom:1.2rem; }
+  h2 { color:var(--accent); font-size:1.12rem; margin:0 0 .6rem; border-bottom:2px solid var(--border); padding-bottom:.4rem; }
+  h3 { color:var(--accent); font-size:1rem; margin:1rem 0 .3rem; }
+  table { border-collapse: collapse; width:100%; margin:.7rem 0; }
+  th, td { border:1px solid var(--border); padding:.45rem .55rem; text-align:center; }
+  th { background:#eaf1f8; }
+  td.left, th.left { text-align:left; }
+  tr.total td { background:#eef7f0; font-weight:700; }
+  .formule { background:#f2f6fb; border:1px solid var(--border); border-radius:8px; padding:.55rem .9rem; margin:.55rem 0; font-size:1.03rem; }
+  .an { color:#45566b; }
+  .an strong { color:#1c2733; }
+  .resultat { background:#eef7f0; border:1px solid #bfe3cd; border-radius:8px; padding:.55rem .9rem; margin:.6rem 0; font-weight:600; }
+  .aide { font-size:.92rem; color:#45566b; }
+  footer { text-align:center; color:#7a8aa0; font-size:.88rem; padding:1rem; }
+  footer a { color:var(--accent); }
+  sup, sub { font-size:.72em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Corrigé — Turbine à gaz : cycle de Brayton ouvert</h1>
+  <p>Premier principe en système ouvert — calculs par unité de masse</p>
+</header>
+<main>
+
+  <section>
+    <h2>Convention et rappel</h2>
+    <div class="formule">Premier principe en système ouvert, régime permanent, par unité de masse : &nbsp;<strong>Δh = q + w</strong></div>
+    <p class="aide">q &gt; 0 et w &gt; 0 lorsqu'ils sont <em>reçus</em> par le fluide ; négatifs lorsqu'ils sont fournis/rejetés. h = c<sub>p</sub>·T avec c<sub>p</sub> = 1,0 kJ·kg⁻¹·K⁻¹.</p>
+  </section>
+
+  <section>
+    <h2>Q1 — Températures aux points du cycle</h2>
+    <h3>Point 2 (compression adiabatique réversible 1 → 2)</h3>
+    <div class="formule">T₂ = T₁·(P₂/P₁)<sup>(γ−1)/γ</sup></div>
+    <p class="an">AN : T₂ = 300 × 8<sup>2/7</sup> = 300 × 1,8114 = <strong>543,4 K</strong> (≈ 270 °C)</p>
+    <h3>Point 3 (combustion isobare 2 → 3)</h3>
+    <p>Dans la chambre de combustion il n'y a pas de pièce mobile : w₂₃ = 0. Le premier principe donne :</p>
+    <div class="formule">Δh₂₃ = q₂₃ = q<sub>c</sub> &nbsp;→&nbsp; c<sub>p</sub>(T₃ − T₂) = q<sub>c</sub> &nbsp;→&nbsp; <strong>T₃ = T₂ + q<sub>c</sub>/c<sub>p</sub></strong></div>
+    <p class="an">AN : T₃ = 543,4 + 1100/1,0 = <strong>1643,4 K</strong> (≈ 1370 °C)</p>
+    <h3>Point 4 (détente adiabatique réversible 3 → 4)</h3>
+    <div class="formule">T₄ = T₃·(P₄/P₃)<sup>(γ−1)/γ</sup> = T₃·(1/8)<sup>2/7</sup></div>
+    <p class="an">AN : T₄ = 1643,4 / 1,8114 = <strong>907,2 K</strong> (≈ 634 °C)</p>
+  </section>
+
+  <section>
+    <h2>Q2 — Tableau d'états</h2>
+    <p>Volume massique : v = R·T/P (avec P en Pa). Enthalpie : h = c<sub>p</sub>·T.</p>
+    <table>
+      <tr><th>État</th><th>P (bar)</th><th>T (K)</th><th>T (°C)</th><th>v (m³·kg⁻¹)</th><th>h (kJ·kg⁻¹)</th></tr>
+      <tr><td><strong>1</strong></td><td>1,0</td><td>300</td><td>27</td><td>0,861</td><td>300,0</td></tr>
+      <tr><td><strong>2</strong></td><td>8,0</td><td>543,4</td><td>270</td><td>0,195</td><td>543,4</td></tr>
+      <tr><td><strong>3</strong></td><td>8,0</td><td>1643,4</td><td>1370</td><td>0,590</td><td>1643,4</td></tr>
+      <tr><td><strong>4</strong></td><td>1,0</td><td>907,2</td><td>634</td><td>2,60</td><td>907,2</td></tr>
+    </table>
+    <p class="an">Détail : v₁ = 287×300/10⁵ = 0,861 m³·kg⁻¹ ; v₂ = 287×543,4/(8×10⁵) = 0,195 m³·kg⁻¹ ; v₃ = 287×1643,4/(8×10⁵) = 0,590 m³·kg⁻¹ ; v₄ = 287×907,2/10⁵ = 2,60 m³·kg⁻¹.</p>
+  </section>
+
+  <section>
+    <h2>Q3 — Tableau récapitulatif des échanges (par kg d'air)</h2>
+    <p>Compresseur et turbine sont adiabatiques (q = 0) ; chambre de combustion et échappement n'ont pas de pièce mobile (w = 0).</p>
+    <table>
+      <tr><th class="left">Transformation</th><th>q (kJ·kg⁻¹)</th><th>w (kJ·kg⁻¹)</th><th>Δh (kJ·kg⁻¹)</th><th class="left">Interprétation</th></tr>
+      <tr><td class="left">1 → 2 compresseur (adiab. rév.)</td><td>0</td><td>+243,4</td><td>+243,4</td><td class="left">travail reçu par le fluide</td></tr>
+      <tr><td class="left">2 → 3 combustion (isobare)</td><td>+1100</td><td>0</td><td>+1100</td><td class="left">chaleur reçue (= q<sub>c</sub>)</td></tr>
+      <tr><td class="left">3 → 4 turbine (adiab. rév.)</td><td>0</td><td>−736,2</td><td>−736,2</td><td class="left">travail fourni par le fluide</td></tr>
+      <tr><td class="left">4 → 1 échappement (isobare)</td><td>−607,2</td><td>0</td><td>−607,2</td><td class="left">chaleur rejetée</td></tr>
+      <tr class="total"><td class="left">Cycle complet</td><td>+492,8</td><td>−492,8</td><td>0</td><td class="left">ΣΔh = Σq + Σw = 0 ✓</td></tr>
+    </table>
+    <p class="an">Détail des calculs : w₁₂ = Δh₁₂ = c<sub>p</sub>(T₂−T₁) = 1,0×(543,4−300) = +243,4 kJ·kg⁻¹ ; q₂₃ = Δh₂₃ = c<sub>p</sub>(T₃−T₂) = +1100 kJ·kg⁻¹ ; w₃₄ = Δh₃₄ = c<sub>p</sub>(T₄−T₃) = 1,0×(907,2−1643,4) = −736,2 kJ·kg⁻¹ ; q₄₁ = Δh₄₁ = c<sub>p</sub>(T₁−T₄) = 1,0×(300−907,2) = −607,2 kJ·kg⁻¹.</p>
+  </section>
+
+  <section>
+    <h2>Q4 — Travail utile massique et rendement</h2>
+    <p>Le travail utile massique <em>fourni</em> par la machine est l'opposé du travail net reçu par le fluide :</p>
+    <div class="formule">w<sub>u</sub> = −(w₁₂ + w₃₄) = −(243,4 − 736,2) = <strong>+492,8 kJ·kg⁻¹</strong></div>
+    <p class="an">Vérification : sur un cycle, ΣΔh = 0 donc Σq + Σw = 0, d'où w<sub>u</sub> = −Σw = Σq = 1100 − 607,2 = 492,8 kJ·kg⁻¹ ✓</p>
+    <div class="formule">Rendement : &nbsp;η = w<sub>u</sub> / q₂₃ = 492,8 / 1100 = <strong>0,448, soit η ≈ 44,8 %</strong></div>
+    <p class="an">Vérification (cycle de Brayton idéal) : η = 1 − T₁/T₂ = 1 − 300/543,4 = 1 − (P₁/P₂)<sup>(γ−1)/γ</sup> ≈ 0,448 ✓</p>
+  </section>
+
+  <section>
+    <h2>Q5 — Puissance utile fournie</h2>
+    <div class="formule">P = D · w<sub>u</sub> = 50 kg·s⁻¹ × 492,8 kJ·kg⁻¹ = 24 640 kW ≈ <strong>24,6 MW</strong></div>
+  </section>
+
+  <section>
+    <h2>Remarques</h2>
+    <ul>
+      <li>Le compresseur absorbe w₁₂/w₃₄ = 243,4/736,2 ≈ <strong>33 %</strong> du travail produit par la turbine : le travail utile n'est que la différence des deux.</li>
+      <li>La chaleur rejetée à l'échappement vaut |q₄₁| = 607,2 kJ·kg⁻¹, soit environ 55 % de l'énergie de combustion : c'est la principale perte du cycle ouvert.</li>
+      <li>Le rendement ne dépend ici que du taux de compression : η = 1 − (P₁/P₂)<sup>(γ−1)/γ</sup>.</li>
+    </ul>
+  </section>
+
+</main>
+<footer>
+  Corrigé de l'exercice « cycle de Brayton ouvert » ·
+  <a href="sujet_turbine_brayton.html">← Retour au sujet</a>
+</footer>
+</body>
+</html>

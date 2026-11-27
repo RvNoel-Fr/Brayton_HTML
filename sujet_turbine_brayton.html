@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercice — Turbine à gaz : cycle de Brayton ouvert</title>
+<style>
+  :root { --accent:#0b5394; --bg:#f7f9fc; --card:#ffffff; --border:#d7e0ea; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; margin:0; background:var(--bg); color:#1c2733; line-height:1.55; }
+  header { background:var(--accent); color:#fff; padding:1.2rem 2rem; }
+  header h1 { margin:0; font-size:1.35rem; }
+  header p { margin:.3rem 0 0; opacity:.92; font-size:.95rem; }
+  main { max-width: 920px; margin: 1.5rem auto; padding: 0 1rem 3rem; }
+  section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.1rem 1.5rem; margin-bottom:1.2rem; }
+  h2 { color:var(--accent); font-size:1.12rem; margin:0 0 .6rem; border-bottom:2px solid var(--border); padding-bottom:.4rem; }
+  table { border-collapse: collapse; width:100%; margin:.7rem 0; }
+  th, td { border:1px solid var(--border); padding:.45rem .55rem; text-align:center; }
+  th { background:#eaf1f8; }
+  td.left, th.left { text-align:left; }
+  .formule { background:#f2f6fb; border:1px solid var(--border); border-radius:8px; padding:.55rem .9rem; margin:.55rem 0; font-size:1.03rem; }
+  .donnees { background:#fff8e6; border:1px solid #ecd9a0; border-radius:10px; padding:.4rem 1.3rem; }
+  .donnees li { margin:.3rem 0; }
+  .question { margin:.85rem 0; padding:.35rem 0 .35rem .8rem; border-left:4px solid var(--accent); }
+  .num { font-weight:700; color:var(--accent); }
+  .aide { font-size:.92rem; color:#45566b; }
+  .svg-wrap { text-align:center; margin:.6rem 0 .2rem; }
+  .svg-cap { text-align:center; font-size:.88rem; color:#45566b; margin-top:.2rem; }
+  footer { text-align:center; color:#7a8aa0; font-size:.88rem; padding:1rem; }
+  footer a { color:var(--accent); }
+  sup, sub { font-size:.72em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Thermodynamique — Premier principe en système ouvert</h1>
+  <p>Exercice : cycle ouvert de turbine à gaz (cycle de Brayton) — calculs par unité de masse</p>
+</header>
+<main>
+
+  <section>
+    <h2>1. Présentation de l'installation</h2>
+    <p>Une turbine à gaz fonctionne en <strong>cycle ouvert</strong> selon le cycle de <strong>Brayton</strong>. De l'air circule en <strong>régime permanent</strong> dans l'installation :</p>
+    <ul>
+      <li>il est comprimé dans un <strong>compresseur</strong> (état 1 → état 2) ;</li>
+      <li>il est chauffé à <strong>pression constante</strong> dans la <strong>chambre de combustion</strong> (2 → 3) ;</li>
+      <li>il se détend dans la <strong>turbine</strong>, qui fournit le travail utile de la machine (3 → 4) ;</li>
+      <li>les gaz brûlés sont rejetés dans l'atmosphère à <strong>pression constante</strong> (état 4) ; de l'air frais entre à l'état 1 — le circuit est ouvert : pas de transformation 4 → 1 du même fluide.</li>
+    </ul>
+    <div class="svg-wrap">
+      <img src="https://raw.githubusercontent.com/RvNoel-Fr/Brayton_HTML/vibe/brayton-html-9b2df8/schem-tag.png" style="max-width:100%; height:auto;" alt="Schéma de principe de la turbine à gaz : air frais au point 1 (p₁, T₁), compresseur (compression), point 2 (p₂, T₂), chambre de combustion au centre (Combustion, combustible arrivant par le haut), point 3 (p₃, T₃), turbine (détente), point 4 (p₄, T₄), gaz brûlés rejetés à droite ; arbre commun reliant le compresseur et la turbine en passant sous la chambre de combustion ; HP au-dessus et BP au-dessous de la ligne de flux.">
+    </div>
+    <p class="svg-cap">Schéma de principe de l'installation (image fournie) : les points 1 à 4 sont repérés entre chaque élément.</p>
+    <p>Tous les calculs sont effectués <strong>par unité de masse</strong> (pour 1 kg d'air traversant l'installation).</p>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 640 380" width="600" role="img" aria-label="Cycle de Brayton ouvert dans le diagramme de Clapeyron P-v, sans retour 4 vers 1">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b5394"/>
+          </marker>
+        </defs>
+        <line x1="50" y1="335" x2="620" y2="335" stroke="#1c2733" stroke-width="1.5"/>
+        <line x1="50" y1="335" x2="50" y2="25" stroke="#1c2733" stroke-width="1.5"/>
+        <text x="606" y="356" font-size="15" font-style="italic">v</text>
+        <text x="30" y="40" font-size="15" font-style="italic">P</text>
+        <line x1="50" y1="300" x2="480" y2="300" stroke="#9db4cc" stroke-dasharray="5 4"/>
+        <line x1="50" y1="60" x2="130" y2="60" stroke="#9db4cc" stroke-dasharray="5 4"/>
+        <text x="54" y="316" font-size="12" fill="#45566b">P₁ = P₄ = 1 bar</text>
+        <text x="200" y="52" font-size="12" fill="#45566b">P₂ = P₃ = 8 bar</text>
+        <path d="M 177 300 C 150 220, 95 130, 61 60" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <path id="leg12" d="M 61 60 C 95 130, 150 220, 177 300" fill="none" stroke="none"/>
+        <line x1="61" y1="60" x2="130" y2="60" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <path id="c34" d="M 130 60 C 230 150, 390 240, 480 300" fill="none" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <line x1="492" y1="300" x2="615" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <text x="556" y="284" font-size="11" fill="#45566b" text-anchor="middle">rejet à l'atmosphère</text>
+        <line x1="60" y1="300" x2="168" y2="300" stroke="#0b5394" stroke-width="2.5" marker-end="url(#arr)"/>
+        <text x="100" y="284" font-size="11" fill="#45566b" text-anchor="middle">air frais</text>
+        <circle cx="177" cy="300" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="61" cy="60" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="130" cy="60" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="480" cy="300" r="4.5" fill="#0b5394" stroke="#fff" stroke-width="1.5"/>
+        <text x="184" y="318" font-size="14" font-weight="bold">1</text>
+        <text x="36" y="58" font-size="14" font-weight="bold">2</text>
+        <text x="138" y="48" font-size="14" font-weight="bold">3</text>
+        <text x="486" y="318" font-size="14" font-weight="bold">4</text>
+        <text font-size="12" fill="#45566b" dy="-8"><textPath href="#leg12" startOffset="10%">compresseur (adiab. rév.)</textPath></text>
+        <text x="140" y="82" font-size="12" fill="#45566b">combustion (isobare)</text>
+        <text font-size="12" fill="#45566b" dy="16"><textPath href="#c34" startOffset="12%">turbine (adiab. rév.)</textPath></text>
+      </svg>
+    </div>
+    <p class="svg-cap">Diagramme de Clapeyron (P, v) du cycle ouvert : aucune évolution 4 → 1 n'est tracée — les gaz sont rejetés en 4, l'air frais entre en 1.</p>
+  </section>
+
+  <section>
+    <h2>2. Données</h2>
+    <div class="donnees">
+      <ul>
+        <li>L'air et les gaz brûlés sont assimilés à un <strong>gaz parfait</strong> : R = 287 J·kg⁻¹·K⁻¹, c<sub>p</sub> = 1,0 kJ·kg⁻¹·K⁻¹, γ = 1,4.</li>
+        <li>État 1 (entrée du compresseur) : P₁ = 1,0 bar ; T₁ = 300 K.</li>
+        <li>1 → 2 : compression <strong>adiabatique réversible</strong> jusqu'à P₂ = 8,0 bar.</li>
+        <li>2 → 3 : combustion <strong>isobare</strong> ; l'énergie massique de combustion vaut q<sub>c</sub> = 1100 kJ·kg⁻¹ et est intégralement transmise à l'air : q₂₃ = q<sub>c</sub>.</li>
+        <li>3 → 4 : détente <strong>adiabatique réversible</strong> dans la turbine jusqu'à P₄ = P₁ = 1,0 bar.</li>
+        <li>4 → 1 : les gaz sont rejetés à l'échappement à P₄ = P₁ ; pour le bilan, on les ramène fictivement de T₄ à T₁ à pression constante (fermeture du cycle ouvert).</li>
+        <li>Débit massique d'air : D = 50 kg·s⁻¹.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Questions</h2>
+    <div class="question"><span class="num">Q1.</span> Calculer les températures T₂, T₃ et T₄ des états 2, 3 et 4. Pour T₃, appliquer le premier principe à la chambre de combustion en utilisant l'énergie massique de combustion q<sub>c</sub>.</div>
+    <div class="question"><span class="num">Q2.</span> Calculer les volumes massiques v₁, v₂, v₃, v₄ et les enthalpies massiques h₁, h₂, h₃, h₄. Présenter les résultats dans un <strong>tableau d'états</strong>.</div>
+    <div class="question"><span class="num">Q3.</span> Pour chacune des quatre transformations, calculer la chaleur massique q, le travail utile massique w et la variation d'enthalpie massique Δh échangés. Présenter les résultats dans un <strong>tableau récapitulatif</strong> (convention : q &gt; 0 et w &gt; 0 lorsqu'ils sont reçus par le fluide).</div>
+    <div class="question"><span class="num">Q4.</span> En déduire le <strong>travail utile massique</strong> w<sub>u</sub> fourni par la machine, puis le <strong>rendement thermique</strong> η = w<sub>u</sub> / q₂₃.</div>
+    <div class="question"><span class="num">Q5.</span> Calculer la <strong>puissance utile</strong> P fournie par la turbine pour le débit massique D = 50 kg·s⁻¹.</div>
+  </section>
+
+</main>
+<footer>
+  Exercice de thermodynamique (1<sup>re</sup> année) — cycle de Brayton ouvert ·
+  <a href="corrige_turbine_brayton.html">Voir le corrigé →</a>
+</footer>
+</body>
+</html>
